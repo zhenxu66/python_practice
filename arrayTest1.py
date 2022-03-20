@@ -8,7 +8,7 @@ def findMaxConsecutiveOnes(nums) -> int:
             j = i + 1
             while j < len(nums) and nums[j] == 1:
                 current_count += 1
-                i += j
+                i += 1
                 j += 1
             if current_count > max_count:
                 max_count = current_count
