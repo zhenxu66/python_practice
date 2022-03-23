@@ -7,22 +7,20 @@ def merge(nums1, m, nums2, n) :
     p = m + n - 1
 
     while p2 >= 0:
-        if nums2[p2] > nums1[p1]:
+        if p1 < 0 or nums2[p2] > nums1[p1]:
             nums1[p] = nums2[p2]
             p2 -= 1
             p -= 1
         else:
-            while nums2[p2] <= nums1[p1] and p1 >= 0:
+            # while nums2[p2] <= nums1[p1] and p1 >= 0:
                 nums1[p] = nums1[p1]
                 p1 -= 1
                 p -= 1
-            nums1[p] = nums2[p2]
-            p2 -= 1
     print(nums1)
 
 # merge([1,2,3,0,0,0], 3, [2,5,6], 3)
-# merge([2,3,0,0,0], 2, [2,5,6], 3)
-merge([2,0], 1, [1], 1)
+merge([2,3,0,0,0], 2, [2,5,6], 3)
+# merge([2,0], 1, [1], 1)
 
 
 # class Solution:
@@ -35,14 +33,12 @@ merge([2,0], 1, [1], 1)
 #         p = m + n - 1
 #
 #         while p2 >= 0:
-#             if nums2[p2] > nums1[p1]:
+#             if p1 < 0 or nums2[p2] > nums1[p1]:
 #                 nums1[p] = nums2[p2]
 #                 p2 -= 1
 #                 p -= 1
 #             else:
-#                 while nums2[p2] < nums1[p1] and p1 >= 0:
+#                 while nums2[p2] <= nums1[p1] and p1 >= 0:
 #                     nums1[p] = nums1[p1]
 #                     p1 -= 1
 #                     p -= 1
-#                 nums1[p] = nums2[p2]
-#                 p2 -= 1
