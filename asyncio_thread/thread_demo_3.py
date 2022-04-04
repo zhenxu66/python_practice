@@ -1,5 +1,5 @@
 # global parameter threading share same parameter
-# use threading Lock, acquire() and release()
+# use threading Lock, acquire() and release(), need to prevent dead lock
 import threading
 import time
 

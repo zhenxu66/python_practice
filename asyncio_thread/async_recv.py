@@ -1,3 +1,4 @@
+# https://docs.python.org/zh-cn/3/library/asyncio-stream.html#asyncio.StreamReader
 import asyncio
 import time
 
@@ -25,6 +26,7 @@ async def handle_request(reader, writer):
         command = command.strip()
         if not command:
             break
+
         response = handle_command(command)
 
         writer.write(response)
@@ -38,7 +40,7 @@ async def main():
         async with server:
             print("Server started on 127.0.0.1:25800")
             await server.serve_forever()
-            
+
 # must use if __name__
 if __name__ == "__main__":
     asyncio.run(main())
