@@ -15,9 +15,10 @@ list_b = [4, 10, 12]
 list_a_even = [x for x in list_a if x % 2 == 0]
 print(list_a_even)
 
+
+# enumerate with index for each element in a list
 for num_index, num_val in enumerate(list_combined):
     print({num_index: num_val})
-
 
 def check_first_last_equal(items):
     tot = 0
