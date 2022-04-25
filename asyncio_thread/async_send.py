@@ -5,7 +5,7 @@ TCP_IP = '127.0.0.1'
 TCP_PORT = 25800
 
 BUFFER_SIZE = 1024
-for i in range(100):Monday
+for i in range(100):
     # print(i)
     if i % 4 == 0:
         message = str.encode("MEAS:a")
